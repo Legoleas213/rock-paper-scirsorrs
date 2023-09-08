@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rock paper Scisors console ver.</title>
+    </head>
+
+<body>
+    <script>
+
+        function getComputerChoice(){
+            let x = ["rock", "paper", "scissors"]
+            let y = Math.floor(Math.random() * 3);
+
+            return x[y];
+
+        }
+
+        function playGame(playerChoice, computerChoice){
+            playerChoice = prompt("Choose Rock, Paper, Scissors"," ")
+            playerChoice = playerChoice.toLowerCase();
+
+            let a = playerChoice;
+            console.log(a);
+
+            computerChoice = getComputerChoice();
+            let b = computerChoice;
+            console.log(b);
+            let result
+
+            if(playerChoice === "rock" && computerChoice === "paper"){
+             result = "You lost";
+            }else if(playerChoice === "paper" && computerChoice === "scissors"){
+             result = "You lost";
+            }else if(playerChoice === "scissors" && computerChoice === "rock"){
+             result = "You lost";
+            }else if(playerChoice === "paper" && computerChoice === "rock"){
+             result = "You win";
+            }else if(playerChoice === "rock" && computerChoice === "scissors"){
+             result = "You win";
+            }else if(playerChoice === "scissors" && computerChoice === "paper"){
+             result = "You win";
+            }else if(playerChoice === computerChoice){
+                result = "Draw";
+            }
+
+            return result;
+
+        }
+
+        console.log(playGame())
+
+
+    </script>
+</body>
+</html>
