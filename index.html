@@ -48,7 +48,34 @@
 
         }
 
-        console.log(playGame())
+        function game(){
+            let cpuScore = 0;
+                let plrScore = 0;
+            for(let i = 1; i<=5; i++){
+                let winner = playGame();
+                
+                 if(winner == "You win"){
+                    plrScore++;
+                 }else if(winner == "You lost"){
+                    cpuScore++;
+                 }else if (winner == "Draw"){
+
+                 }
+            
+                }
+            if (cpuScore>plrScore){
+                console.log("You lost the match");
+            }else if(cpuScore<plrScore){
+                console.log("You won the match");
+             
+            }else if(cpuScore == plrScore){
+             console.log("Draw");
+            }
+        }
+
+        game();
+    
+        
 
 
     </script>
